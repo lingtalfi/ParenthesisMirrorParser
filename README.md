@@ -39,6 +39,10 @@ Summary
 History Log
 =============
 
+- 1.0.1 -- 2020-10-05
+
+    - fix ParenthesisMirrorParser->parseString, return 1 instead of true for standalone strings 
+    
 - 1.0.0 -- 2020-10-05
 
     - initial commit

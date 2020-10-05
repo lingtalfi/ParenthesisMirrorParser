@@ -67,22 +67,26 @@ class ParenthesisMirrorParser
     public function parseString(string $s)
     {
         $regex = '!' . $this->identifier . '\((.*)\)' . strrev($this->identifier) . '!Ums';
+        $length = mb_strlen($s);
 
-        $isScalar = true;
+        $isStandAlone = false;
         $nonScalarReplacement = null;
-        $s = preg_replace_callback($regex, function ($match) use (&$isScalar, &$nonScalarReplacement) {
+        $s = preg_replace_callback($regex, function ($match) use (&$isStandAlone, &$nonScalarReplacement, $length) {
             $captured = $match[1];
+
+
+            $isStandAlone = ($length === 2 * mb_strlen($this->identifier) + 2 + mb_strlen($captured));
             $replacement = call_user_func($this->converter, $captured);
-            if (true === is_scalar($replacement)) {
-                return $replacement;
-            } else {
-                $isScalar = false;
+
+            if (true === $isStandAlone) {
                 $nonScalarReplacement = $replacement;
+                return $captured;
+            } else {
+                return $replacement;
             }
-            return $captured;
         }, $s);
 
-        if (false === $isScalar) {
+        if (true === $isStandAlone) {
             return $nonScalarReplacement;
         }
 

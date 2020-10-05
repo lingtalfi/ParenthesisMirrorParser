@@ -50,7 +50,7 @@ Returns string.
 
 Source Code
 ===========
-See the source code for method [ParenthesisMirrorParser::parseString](https://github.com/lingtalfi/ParenthesisMirrorParser/blob/master/ParenthesisMirrorParser.php#L67-L90)
+See the source code for method [ParenthesisMirrorParser::parseString](https://github.com/lingtalfi/ParenthesisMirrorParser/blob/master/ParenthesisMirrorParser.php#L67-L94)
 
 
 See Also

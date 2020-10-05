@@ -50,7 +50,7 @@ Returns array.
 
 Source Code
 ===========
-See the source code for method [ParenthesisMirrorParser::parseArray](https://github.com/lingtalfi/ParenthesisMirrorParser/blob/master/ParenthesisMirrorParser.php#L99-L105)
+See the source code for method [ParenthesisMirrorParser::parseArray](https://github.com/lingtalfi/ParenthesisMirrorParser/blob/master/ParenthesisMirrorParser.php#L103-L109)
 
 
 See Also
