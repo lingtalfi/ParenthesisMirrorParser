@@ -39,6 +39,10 @@ Summary
 History Log
 =============
 
+- 1.0.2 -- 2020-12-04
+
+    - Add lpi-deps.byml file
+
 - 1.0.1 -- 2020-10-05
 
     - fix ParenthesisMirrorParser->parseString, return 1 instead of true for standalone strings 
